@@ -6,7 +6,6 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
 
   const name = document.getElementById("name").value.trim();
   const cnic = document.getElementById("cnic").value.trim();
-  const gcnic = document.getElementById("gcnic").value.trim();
   const email = document.getElementById("email").value.trim();
 
   // Basic validation
@@ -63,3 +62,4 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     console.error("Error sending data:", err);
   }
 });
+
