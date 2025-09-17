@@ -13,10 +13,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     alert("❌ CNIC must be 13 digits!");
     return;
   }
-  if (gcnic.length !== 13 || isNaN(gcnic)) {
-    alert("❌ Guardian CNIC must be 13 digits!");
-    return;
-  }
+
   if (email && !email.includes("@")) {
     alert("❌ Please enter a valid email address!");
     return;
@@ -24,19 +21,19 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
 
   // Collecting all form data
   const formData = {
-    name,
-    fname: document.getElementById("fname").value.trim(),
-    cnic,
-    gcnic,
-    bform: document.getElementById("bform").value.trim(),
-    present: document.getElementById("present").value.trim(),
-    permanent: document.getElementById("permanent").value.trim(),
-    contact: document.getElementById("contact").value.trim(),
-    gcontact: document.getElementById("gcontact").value.trim(),
-    email,
-    dob: document.getElementById("dob").value,
-    grade: document.getElementById("grade").value.trim()
-  };
+  name,
+  fname: document.getElementById("fname").value.trim(),
+  cnic,
+  bform: document.getElementById("bform").value.trim(),
+  present: document.getElementById("present").value.trim(),
+  permanent: document.getElementById("permanent").value.trim(),
+  contact: document.getElementById("contact").value.trim(),
+  gcontact: document.getElementById("gcontact").value.trim(),
+  email,
+  dob: document.getElementById("dob").value,
+  grade: document.getElementById("grade").value.trim()
+};
+
 
   // Show success message
   const msg = document.getElementById("successMessage");
@@ -62,4 +59,5 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     console.error("Error sending data:", err);
   }
 });
+
 
